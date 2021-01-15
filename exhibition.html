@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>ギャラリー雛</title>
+    <meta name="description" content="ギャラリー雛はのホームページを作り替えました。">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+    /* リセットCSSここから */
+    /*
+      html5doctor.com Reset Stylesheet
+      v1.6.1
+      Last Updated: 2010-09-17
+      Author: Richard Clark - http://richclarkdesign.com
+      Twitter: @rich_clark
+      */
+
+      html, body, div, span, object, iframe,
+      h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+      abbr, address, cite, code,
+      del, dfn, em, img, ins, kbd, q, samp,
+      small, strong, sub, sup, var,
+      b, i,
+      dl, dt, dd, ol, ul, li,
+      fieldset, form, label, legend,
+      table, caption, tbody, tfoot, thead, tr, th, td,
+      article, aside, canvas, details, figcaption, figure,
+      footer, header, hgroup, menu, nav, section, summary,
+      time, mark, audio, video {
+        margin:0;
+        padding:0;
+        border:0;
+        outline:0;
+        font-size:100%;
+        vertical-align:baseline;
+        background:transparent;
+      }
+
+      body {
+        line-height:1;
+      }
+
+      article,aside,details,figcaption,figure,
+      footer,header,hgroup,menu,nav,section {
+        display:block;
+      }
+
+      nav ul {
+        list-style:none;
+      }
+
+      blockquote, q {
+        quotes:none;
+      }
+
+      blockquote:before, blockquote:after,
+      q:before, q:after {
+        content:'';
+        content:none;
+      }
+
+      a {
+        margin:0;
+        padding:0;
+        font-size:100%;
+        vertical-align:baseline;
+        background:transparent;
+      }
+
+      /* change colours to suit your needs */
+      ins {
+        background-color:#ff9;
+        color:#000;
+        text-decoration:none;
+      }
+
+      /* change colours to suit your needs */
+      mark {
+        background-color:#ff9;
+        color:#000;
+        font-style:italic;
+        font-weight:bold;
+      }
+
+      del {
+        text-decoration: line-through;
+      }
+
+      abbr[title], dfn[title] {
+        border-bottom:1px dotted;
+        cursor:help;
+      }
+
+      table {
+        border-collapse:collapse;
+        border-spacing:0;
+      }
+
+      /* change border colour to suit your needs */
+      hr {
+        display:block;
+        height:1px;
+        border:0;
+        border-top:1px solid #cccccc;
+        margin:1em 0;
+        padding:0;
+      }
+
+      input, select {
+        vertical-align:middle;
+      }
+
+
+
+      /*  cssここから */
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+      }
+
+      .all-container {
+        width: 100%;
+      }
+
+      /* headerここから*/
+      header {
+        text-align: right;
+        margin: 0 auto;
+        height: 105px;
+        width: 100%;
+        max-width: 1100px;
+      }
+
+      header ul {
+        display: inline-block;
+        padding-top: 20px;
+      }
+
+      header ul li {
+        display: inline-block;
+        list-style: none;
+        text-align: left;
+        vertical-align: middle;
+      }
+
+      header ul li h2 {
+        color: #6C757D;
+        font-size: 13px;
+        padding-bottom: 7px;
+      }
+
+      header ul li:first-child {
+        margin-right: 28px;
+      }
+
+      header ul li p {
+        color: #6C757D;
+        font-size: 26px;
+        padding-top: 7px;
+      }
+
+      header ul li a:not(.number-top) {
+        width: 80px;
+        height: 20px;
+        color: #ffffff;
+        text-decoration: none;
+        background-color: #5A6268;
+        height: 48px;
+        width: 115px;
+        line-height: 48px;
+        padding: 10px 18px;
+        border-radius: 6px;
+      }
+
+      header ul li .number-top {
+        font-size: 24px;
+        text-decoration: none;
+        color: black;
+      }
+
+      header ul li .number-top:hover {
+        color: #1e90ff;
+      }
+
+      header h1 img {
+        width: 280px;
+        height: 86px;
+        margin-bottom: 10px;
+      }
+      /* headerここまで */
+
+      /* navここから */
+      #global_nav {
+        background: #FFFFFF;
+        margin-bottom: 16px;
+        text-align: center;
+      }
+
+      #global_nav ul {
+        width: 1100px;
+        margin: 0 auto;
+        display: inline-block;
+      }
+
+      #global_nav ul li {
+        display: inline-block;
+        width: 180px;
+        text-align: center;
+        border-left: 0.5px solid #000;
+      }
+
+      #global_nav ul li:last-child {
+        border-right: 0.5px solid #000;
+      }
+
+      #global_nav ul li a {
+        height: 51px;
+        line-height: 51px;
+        display: inline-block;
+        text-decoration: none;
+        font-size: 17px;
+        font-weight: normal;
+        transition: background-color .2s linear;
+        text-align: center;
+        padding: 0 35px;
+      }
+
+      #global_nav ul li a:link {
+        text-decoration: none;
+        color: #000000;
+      }
+      #global_nav ul li a:visited {
+        text-decoration: none;
+        color: #000000;
+      }
+      #global_nav ul li a:active {
+        text-decoration: none;
+        color: #000000;
+      }
+      #global_nav ul li a:hover {
+        border-bottom: solid;
+        border-bottom-color: #333333;
+        border-bottom-width: 1px;
+      }
+      /* navここまで */
+
+      /* key_visualここから */
+      .key_visual {
+        margin: 0 auto;
+        background-position: center;
+        background-image: url(editted1.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: 0.8;
+        margin-top: 5px;
+        height: 293px;
+        width: 100%;
+        max-width: 1100px;
+      }
+
+      .key_visual_contents {
+        position: absolute; top: 140px; left: 900px;
+      }
+
+      .inner {
+        width: 1100px;
+        margin: 0 auto;
+        position: relative;
+      }
+
+      .inner h1 {
+        position: absolute; top:7px;
+      }
+      /* key_visualここまで */
+
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        margin-top: 10px;
+        font-size: 15px;
+        line-height: 2em;
+      }
+
+      /* mainここから */
+      #main {
+        width: 73%;
+        float: right;
+        padding-bottom: 95px;
+      }
+
+      @media (max-width: 1000px) {
+       header ul {
+         display: none;
+       }
+
+       header ul li{
+         width: 100%;
+       }
+
+       #global_nav ul {
+         width: 100%;
+       }
+
+       .key-visual {
+         width: 100%;
+       }
+
+        #sidebar {
+          width: 0;
+          display: none;
+        }
+
+        #main {
+          width: 100%;
+          margin: 0 auto;
+        }
+
+        #main h2, h3 {
+          width: 100%;
+          margin: 0 auto;
+          font-size: 15px;
+        }
+
+        #main section p {
+          text-align: left;
+          font-size: 15px;
+        }
+      }
+
+      @media (max-width: 670px) {
+        header ul {
+          display: none;
+        }
+
+        #global_nav ul li {
+          margin-bottom: 10px;
+        }
+
+        #global_nav ul li:nth-child(2) {
+          border-right: 0.5px solid #000;
+        }
+
+        #global_nav ul li:nth-child(4) {
+          border-right: 0.5px solid #000;
+        }
+
+        #sidebar {
+          width: 0;
+          display: none;
+        }
+
+        #main h2, h3 {
+          width: 100%;
+          margin: 0 auto;
+          text-align: center;
+          font-size: 13px;
+        }
+
+        #main section p {
+          text-align: left;
+          font-size: 13px;
+        }
+        footer {
+          text-align: center;
+        }
+
+        footer p {
+          font-size: 4px;
+        }
+      }
+
+      #main h2 {
+        color: white;
+        background: #000000 url(mark1.png) no-repeat left 5px center;
+        margin: 15px 0;
+        line-height: 39px;
+        padding-left: 30px;
+      }
+
+      #main h3 {
+        height: 38px;
+        padding: 0 15px;
+        border: 1px solid #ccc;
+        margin: 45px 0 15px 0;
+        background: linear-gradient(#fff, #ebebeb);
+        color: #333;
+        line-height: 38px;
+      }
+
+      #main h4 {
+        font-weight: bold;
+        padding: 0 15px;
+        margin-top: 14px;
+      }
+
+      #main p {
+        line-height: 27px;
+        padding: 0 15px;
+      }
+
+      #main a {
+        color: #333;
+      }
+
+      .news {
+        height: 150px;
+        overflow: scroll;
+        padding-left: 15px;
+      }
+
+      .news dt {
+        display: inline-block;
+        width: 35%;
+        min-width: 100px;
+        border-bottom: 1px solid #ccc;
+      }
+
+      .news dd {
+        display: inline-block;
+        width: 65%;
+        border-bottom: 1px solid #ccc;
+      }
+
+
+      /* sidebarここから */
+      #sidebar {
+        width: 23%;
+        float: left;
+      }
+
+      #sidebar h2 {
+        padding-left: 10px;
+        border-left: 3px solid #000;
+        margin-bottom: 18px;
+        line-height: 1em;
+      }
+
+      #sidebar p {
+        line-height: 27px
+      }
+
+      .box {
+        margin: 15px 0;
+      }
+
+      .br-background {
+        padding: 20px 15px;
+        background-color: #e4e4e4;
+        border: 1px solid #ccc;
+      }
+
+      #sidebar ul {
+        list-style: none;
+        border-bottom: 1px solid #ccc;
+      }
+
+      #sidebar ul li {
+        background-color: #ffffff;
+        line-height: 32px;
+        height: 32px;
+        border-bottom: 1px solid #ccc;
+      }
+
+      #sidebar ul li:last-child {
+        border: none;
+      }
+
+      #sidebar ul li a {
+        padding-left: 12px;
+        display: block;
+        color: #333;
+        text-decoration: none;
+        transition: 0.5s;
+      }
+
+      #sidebar ul li a:hover {
+        background-color: black;
+        color: #fff;
+      }
+      /* sidebarここまで */
+
+      footer {
+        height: 51px;
+        font-size: 12px;
+        clear:both;
+        text-align: center;
+        line-height: 2em;
+        color: white;
+        background: #000000
+      }
+    </style>
+  </head>
+
+
+  <body>
+    <header>
+      <div class="all-container">
+        <div class="inner">
+          <h1><a href="index.html"><img src="gallery_hina_logo.png" alt="ロゴ画像"></a></h1>
+          <ul>
+            <li>
+              <h2>お電話でのご予約はこちら</h2>
+              <p><a href="contact.html" class="number-top">000-0000-0000</a></p>
+            </li>
+            <li>
+              <a href="contact.html">FAX予約</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+　　</header>
+    <nav id="global_nav">
+      <div class="all-container">
+        <ul>
+          <li><a href="index.html">トップページ</a></li><!--
+       --><li><a href="exhibition.html">過去の展示会</a></li><!--
+       --><li><a href="service.html">ご利用案内</a></li><!--
+       --><li><a href="access.html">アクセス</a></li><!--
+       --><li><a href="contact.html">お問い合わせ</a></li><!--
+       --><li><a href="question.html">よくある質問</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="key_visual">
+      <div class="inner">
+        <div class="key_visual_contents">
+        </div>
+      </div>
+    </div>
+    <div class="all-container">
+      <div class="container">
+        <div id="main">
+          <div class="heading">
+            <h2>過去の展示会</h2>
+            <p>　2016年3月に開廊したギャラリー雛はおかげさまで今年で5年目に入りました。ここでは今後当ギャラリーの
+            使用を検討されている方へ向けて、過去の展示会のすべてを一覧で記録しております。是非ご覧ください。</p>
+          </div>
+          <div class="all-exhibitions">
+            <section>
+              <h3>2019年度</h3>
+              <div class="news">
+                <dl>
+                  <dt><time>2019/5/31~6/5</time></dt><!--
+               --><dd>水墨画九人展</dd>
+                  <dt><time>2019/5/10~5/15</time></dt><!--
+               --><dd>中西徹展</dd>
+                  <dt><time>2019/5/3~5/8</time></dt><!--
+               --><dd>ざっくばらん展</dd>
+                  <dt><time>2019/12/7~12/9</time></dt><!--
+               --><dd>手作り大好き展</dd>
+                </dl>
+              </div>
+            </section>
+            <section>
+              <h3>2018年度</h3>
+              <div class="news">
+                <dl>
+                  <dt><time>2018/11/30~12/5</time></dt><!--
+               --><dd>Some Art</dd>
+                  <dt><time>2018/11/23</time></dt><!--
+               --><dd>戸上恭子展</dd>
+                  <dt><time>2018/11/9</time></dt><!--
+               --><dd>新旧美京都展</dd>
+                  <dt><time>2018/11/2~11/7</time></dt><!--
+               --><dd>染織いろいろ</dd>
+                  <dt><time>2018/10/19~10/24</time></dt><!--
+               --><dd>戸上真理子</dd>
+                  <dt><time>2018/10/12~10/18</time></dt><!--
+               --><dd>辻本雅美</dd>
+                  <dt><time>2018/10/5~10/10</time></dt><!--
+               --><dd>岡田永久展</dd>
+                  <dt><time>2018/6/30~7/1</time></dt><!--
+               --><dd>Y'sデザイン～リフォーム相談会</dd>
+                  <dt><time>2018/6/10~6/16</time></dt><!--
+               --><dd>行動美術 10人10号展</dd>
+                  <dt><time>2018/5/18~5/23</time></dt><!--
+               --><dd>セーブル会</dd>
+                  <dt><time>2018/4/6~4/11</time></dt><!--
+               --><dd>村田祐二　水彩画展</dd>
+                </dl>
+              </div>
+            </section>
+            <section>
+              <h3>2017年度</h3>
+              <div class="news">
+                <dl>
+                  <dt><time>2017/12/5~12/10</time></dt><!--
+               --><dd>中田幸夫</dd>
+                  <dt><time>2017/11/24~11/29</time></dt><!--
+               --><dd>魚森光代</dd>
+                  <dt><time>2017/11/17~11/22</time></dt><!--
+               --><dd>ヒロオカ絵画教室作品展</dd>
+                  <dt><time>2017/9/1~9/6</time></dt><!--
+               --><dd>河合節子　和紙と戯れ展</dd>
+                  <dt><time>2017/4/18~4/23</time></dt><!--
+               --><dd>高瀬　昌郎　作陶展　　Ｇallery   葉　企画</dd>
+                  <dt><time>2017/4/11~4/16</time></dt><!--
+               --><dd>8ｔｈ セーブル会夙川教室展 (魚森 光代)</dd>
+                  <dt><time>2017/3/30~4/2</time></dt><!--
+               --><dd>テディベア 展 堀井芳子</dd>
+                  <dt><time>2017/3/21~3/26</time></dt><!--
+               --><dd>眞鍋芳和 展　透明水彩画</dd>
+                  <dt><time>2017/12~3/19</time></dt><!--
+               --><dd>水墨画紅石会40周年記念出版『四季の花めぐり』原画展</dd>
+               </dl>
+              </div>
+            </section>
+            <section>
+              <h3>2016年度</h3>
+              <div class="news">
+                <dl>
+                  <dt><time>2016/12/13~12/18</time></dt><!--
+               --><dd>14th雛の会展　独立美術協会会員による作品展　（伊藤弘之 井澤幸三 廣田政生）</dd>
+                  <dt><time>2016/12/6~12/11</time></dt><!--
+               --><dd>新日本美術協会　京都支部小品展</dd>
+                  <dt><time>2016/11/29~12/06</time></dt><!--
+               --><dd>26th 織グループ「こと座」展　（吉田清子）</dd>
+                  <dt><time>2016/11/26~11/28</time></dt><!--
+               --><dd>大森　良剛　油彩展</dd>
+                  <dt><time>2016/11/22~25</time></dt><!--
+               --><dd>春名　芙蓉　花の陶磁器展</dd>
+                  <dt><time>2016/11/6~11/8</time></dt><!--
+               --><dd>橋本　健治　古希記念展</dd>
+                  <dt><time>2016/11/6~11/8</time></dt><!--
+               --><dd>戸上　恭子　個展</dd>
+                  <dt><time>2016/10/25~10/30</time></dt><!--
+               --><dd>10th 水彩グループ ゆう展　（野口順一）</dd>
+                  <dt><time>2016/10/16~10/18</time></dt><!--
+               --><dd>斎藤　和代　裂織作品展</dd>
+                  <dt><time>2016/10/10~10/15</time></dt><!--
+               --><dd>第７回わらび野会展　横田務 透明水彩画教室</dd>
+                  <dt><time>2016/10/4~10/9</time></dt><!--
+               --><dd>酒匂　溪香　書展</dd>
+                  <dt><time>2016/9/27~10/9</time></dt><!--
+               --><dd>Jokers72 and 一ノ瀬孝子　展</dd>
+                  <dt><time>2016/9/20~9/25</time></dt><!--
+               --><dd>岡田　長久　展</dd>
+                  <dt><time>2016/9/16~9/18</time></dt><!--
+               --><dd>林田　勇治　　水彩画展</dd>
+                  <dt><time>2016/9/3~9/10</time></dt><!--
+               --><dd>イタリアボローニャ絵本原画展（2016）入選作家　三浦 友萌　個展</dd>
+                  <dt><time>2016/6/26~6/30</time></dt><!--
+               --><dd>宋　帷虹　展</dd>
+                  <dt><time>2016/4/16~4/18</time></dt><!--
+               --><dd>行動美術１０人１０号展</dd>
+                  <dt><time>2016/5/3~5/8</time></dt><!--
+               --><dd>ざっくばらん大人の絵塾　作品展　（小林志津子）</dd>
+                  <dt><time>2016/4/25~4/31</time></dt><!--
+               --><dd>Arts＆Crafts展　（ギャラリー葉企画）</dd>
+                  <dt><time>2016/4/22~4/24</time></dt><!--
+               --><dd>道草の会　作品展</dd>
+                  <dt><time>2016/4/12~4/17</time></dt><!--
+               --><dd>7th ｾｰﾌﾞﾙ会夙川教室展　（魚森光代）</dd>
+                  <dt><time>2016/4/5~4/10</time></dt><!--
+               --><dd>天野　隆生　個展</dd>
+                  <dt><time>2016/3/29~4/3</time></dt><!--
+               --><dd>伊藤 弘之 展 Cherry Blossoms</dd>
+                  <dt><time>2016/3/22~3/27</time></dt><!--
+               --><dd>第５回　雋溪水墨画会春季観摩展　（王 石明）</dd>
+                  <dt><time>2016/3/18~3/20</time></dt><!--
+               --><dd>春・花めぐりフェア　（春名芙蓉）</dd>
+                  <dt><time>2017/3/1~3/6</time></dt><!--
+               --><dd>ヒロオカ絵画教室　作品展　（清水恵美子)</dd>
+               </dl>
+              </div>
+            </section>
+          </div>
+        </div><!-- /#main -->
+        <div id="sidebar">
+          <div class="box br-background">
+            <h2>SUB MENU</h2>
+            <ul>
+              <li><a href="index.html">トップページ</a></li><!--
+           --><li><a href="exhibition.html">過去の展示会</a></li><!--
+           --><li><a href="service.html">ご利用案内</a></li><!--
+           --><li><a href="access.html">アクセス</a></li><!--
+           --><li><a href="contact.html">お問い合わせ</a></li><!--
+           --><li><a href="question.html">よくある質問</a></li>
+            </ul>
+          </div>
+        </div><!-- /#sidebar -->
+        <footer>
+          <p><small>当ホームページに記載の画像・内容に関する無断転載はご遠慮ください。</small></p>
+          <p>利用者の方々の個人情報の無断転載・利用につきましては、見つけ次第、法的処置を執る場合もございます。</p>
+        </footer>
+      </div><!-- /.container -->
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"></script>
+  </body>
+</html>

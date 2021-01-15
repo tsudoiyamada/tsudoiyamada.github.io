@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>ギャラリー雛</title>
+    <meta name="description" content="ギャラリー雛はのホームページを作り替えました。">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+    /* リセットCSSここから */
+    /*
+      html5doctor.com Reset Stylesheet
+      v1.6.1
+      Last Updated: 2010-09-17
+      Author: Richard Clark - http://richclarkdesign.com
+      Twitter: @rich_clark
+      */
+
+      html, body, div, span, object, iframe,
+      h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+      abbr, address, cite, code,
+      del, dfn, em, img, ins, kbd, q, samp,
+      small, strong, sub, sup, var,
+      b, i,
+      dl, dt, dd, ol, ul, li,
+      fieldset, form, label, legend,
+      table, caption, tbody, tfoot, thead, tr, th, td,
+      article, aside, canvas, details, figcaption, figure,
+      footer, header, hgroup, menu, nav, section, summary,
+      time, mark, audio, video {
+        margin:0;
+        padding:0;
+        border:0;
+        outline:0;
+        font-size:100%;
+        vertical-align:baseline;
+        background:transparent;
+      }
+
+      body {
+        line-height:1;
+      }
+
+      article,aside,details,figcaption,figure,
+      footer,header,hgroup,menu,nav,section {
+        display:block;
+      }
+
+      nav ul {
+        list-style:none;
+      }
+
+      blockquote, q {
+        quotes:none;
+      }
+
+      blockquote:before, blockquote:after,
+      q:before, q:after {
+        content:'';
+        content:none;
+      }
+
+      a {
+        margin:0;
+        padding:0;
+        font-size:100%;
+        vertical-align:baseline;
+        background:transparent;
+      }
+
+      /* change colours to suit your needs */
+      ins {
+        background-color:#ff9;
+        color:#000;
+        text-decoration:none;
+      }
+
+      /* change colours to suit your needs */
+      mark {
+        background-color:#ff9;
+        color:#000;
+        font-style:italic;
+        font-weight:bold;
+      }
+
+      del {
+        text-decoration: line-through;
+      }
+
+      abbr[title], dfn[title] {
+        border-bottom:1px dotted;
+        cursor:help;
+      }
+
+      table {
+        border-collapse:collapse;
+        border-spacing:0;
+      }
+
+      /* change border colour to suit your needs */
+      hr {
+        display:block;
+        height:1px;
+        border:0;
+        border-top:1px solid #cccccc;
+        margin:1em 0;
+        padding:0;
+      }
+
+      input, select {
+        vertical-align:middle;
+      }
+
+
+
+      /*  cssここから */
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+      }
+
+      .all-container {
+        width: 100%;
+      }
+
+      /* headerここから*/
+      header {
+        text-align: right;
+        margin: 0 auto;
+        height: 105px;
+        width: 100%;
+        max-width: 1100px;
+      }
+
+      header ul {
+        display: inline-block;
+        padding-top: 20px;
+      }
+
+      header ul li {
+        display: inline-block;
+        list-style: none;
+        text-align: left;
+        vertical-align: middle;
+      }
+
+      header ul li h2 {
+        color: #6C757D;
+        font-size: 13px;
+        padding-bottom: 7px;
+      }
+
+      header ul li:first-child {
+        margin-right: 28px;
+      }
+
+      header ul li p {
+        color: #6C757D;
+        font-size: 26px;
+        padding-top: 7px;
+      }
+
+      header ul li a:not(.number-top) {
+        width: 80px;
+        height: 20px;
+        color: #ffffff;
+        text-decoration: none;
+        background-color: #5A6268;
+        height: 48px;
+        width: 115px;
+        line-height: 48px;
+        padding: 10px 18px;
+        border-radius: 6px;
+      }
+
+      header ul li .number-top {
+        font-size: 24px;
+        text-decoration: none;
+        color: black;
+      }
+
+      header ul li .number-top:hover {
+        color: #1e90ff;
+      }
+
+      header h1 img {
+        width: 280px;
+        height: 86px;
+        margin-bottom: 10px;
+      }
+      /* headerここまで */
+
+      /* navここから */
+      #global_nav {
+        background: #FFFFFF;
+        margin-bottom: 16px;
+        text-align: center;
+      }
+
+      #global_nav ul {
+        width: 1100px;
+        margin: 0 auto;
+        display: inline-block;
+      }
+
+      #global_nav ul li {
+        display: inline-block;
+        width: 180px;
+        text-align: center;
+        border-left: 0.5px solid #000;
+      }
+
+      #global_nav ul li:last-child {
+        border-right: 0.5px solid #000;
+      }
+
+      #global_nav ul li a {
+        height: 51px;
+        line-height: 51px;
+        display: inline-block;
+        text-decoration: none;
+        font-size: 17px;
+        font-weight: normal;
+        transition: background-color .2s linear;
+        text-align: center;
+        padding: 0 35px;
+      }
+
+      #global_nav ul li a:link {
+        text-decoration: none;
+        color: #000000;
+      }
+      #global_nav ul li a:visited {
+        text-decoration: none;
+        color: #000000;
+      }
+      #global_nav ul li a:active {
+        text-decoration: none;
+        color: #000000;
+      }
+      #global_nav ul li a:hover {
+        border-bottom: solid;
+        border-bottom-color: #333333;
+        border-bottom-width: 1px;
+      }
+      /* navここまで */
+
+      /* key_visualここから */
+      .key_visual {
+        margin: 0 auto;
+        background-position: center;
+        background-image: url(editted1.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: 0.8;
+        margin-top: 5px;
+        height: 293px;
+        width: 100%;
+        max-width: 1100px;
+      }
+
+      .key_visual_contents {
+        position: absolute; top: 140px; left: 900px;
+      }
+
+      .inner {
+        width: 1100px;
+        margin: 0 auto;
+        position: relative;
+      }
+
+      .inner h1 {
+        position: absolute; top:7px;
+      }
+      /* key_visualここまで */
+
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        margin-top: 10px;
+        font-size: 15px;
+        line-height: 2em;
+      }
+
+      /* mainここから */
+      #main {
+        width: 73%;
+        float: right;
+        padding-bottom: 95px;
+      }
+
+      @media (max-width: 1000px) {
+       header ul {
+         display: none;
+       }
+
+       header ul li{
+         width: 100%;
+       }
+
+       #global_nav ul {
+         width: 100%;
+       }
+
+       .key-visual {
+         width: 100%;
+       }
+
+        #sidebar {
+          width: 0;
+          display: none;
+        }
+
+        #main {
+          width: 100%;
+          margin: 0 auto;
+        }
+
+        #main h2, h3 {
+          width: 100%;
+          margin: 0 auto;
+          font-size: 15px;
+        }
+
+        #main section p {
+          text-align: left;
+          font-size: 15px;
+        }
+      }
+
+      @media (max-width: 670px) {
+        header ul {
+          display: none;
+        }
+
+        #global_nav ul li {
+          margin-bottom: 10px;
+        }
+
+        #global_nav ul li:nth-child(2) {
+          border-right: 0.5px solid #000;
+        }
+
+        #global_nav ul li:nth-child(4) {
+          border-right: 0.5px solid #000;
+        }
+
+        #sidebar {
+          width: 0;
+          display: none;
+        }
+
+        #main h2, h3 {
+          width: 100%;
+          margin: 0 auto;
+          text-align: center;
+          font-size: 13px;
+        }
+
+        #main section p {
+          text-align: left;
+          font-size: 13px;
+        }
+        footer {
+          text-align: center;
+        }
+
+        footer p {
+          font-size: 4px;
+        }
+      }
+
+      #main h2 {
+        color: white;
+        background: #000000 url(mark1.png) no-repeat left 5px center;
+        margin: 15px 0;
+        line-height: 39px;
+        padding-left: 30px;
+      }
+
+      #main h3 {
+        height: 38px;
+        padding: 0 15px;
+        border: 1px solid #ccc;
+        margin: 15px 0;
+        background: linear-gradient(#fff, #ebebeb);
+        color: #333;
+        line-height: 38px;
+      }
+
+      #main h4 {
+        font-weight: bold;
+        padding: 0 15px;
+        margin-top: 14px;
+      }
+
+      #main p {
+        line-height: 27px;
+        padding: 0 15px;
+      }
+
+      #main a {
+        color: #333;
+      }
+
+      #main section .slide-wrapper {
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+        color: #5e6f84;
+        padding: 50px 0;
+      }
+
+      #main section .slides {
+        padding: 0;
+      }
+
+      #main section .slide {
+        display: none;
+      }
+
+      #main section .active {
+        display: block;
+      }
+
+      #main section .slide img {
+        width: 400px;
+        height: 300px;
+      }
+
+      #main section .index-btn-wrapper {
+      font-size: 16px;
+      margin-top: 20px;
+      }
+
+      #main section .index-btn {
+        display: inline-block;
+        color: #4b0082;
+        background-color: #dda0dd;
+        width: 50px;
+        border-radius: 2px;
+        cursor: pointer;
+      }
+
+      #main section .index-btn:hover {
+        color: #4b0082;
+        background-color: #da70d6;
+      }
+
+      #main section .slide-wrapper-second {
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+        color: #5e6f84;
+        padding: 50px 0;
+      }
+
+      #main section .slides-second {
+        padding: 0;
+      }
+
+      #main section .slide-second {
+        display: none;
+      }
+
+      #main section .active {
+        display: block;
+      }
+
+      #main section .slide-second img {
+        width: 400px;
+        height: 300px;
+      }
+
+      #main section .index-btn-wrapper-second {
+      font-size: 16px;
+      margin-top: 20px;
+      }
+
+      #main section .index-btn-second {
+        display: inline-block;
+        color: #4b0082;
+        background-color: #e9967a;
+        width: 50px;
+        border-radius: 2px;
+        cursor: pointer;
+      }
+
+      #main section .index-btn-second:hover {
+        color: #4b0082;
+        background-color: #fa8072;
+      }
+
+      .news {
+        height: 150px;
+        overflow: scroll;
+        padding-left: 15px;
+      }
+
+      .news dt {
+        display: inline-block;
+        width: 13%;
+        min-width: 100px;
+        border-bottom: 1px solid #ccc;
+      }
+
+      .news dd {
+        display: inline-block;
+        width: 87%;
+        border-bottom: 1px solid #ccc;
+      }
+
+      .news dl dd span {
+        background-color: #FF0000;
+        color: white;
+        font-size: 6px;
+        padding: 0 5px;
+        border-radius: 2px;
+      }
+      /* mainここまで */
+
+      /* sidebarここから */
+      #sidebar {
+        width: 23%;
+        float: left;
+      }
+
+      #sidebar h2 {
+        padding-left: 10px;
+        border-left: 3px solid #000;
+        margin-bottom: 18px;
+        line-height: 1em;
+      }
+
+      #sidebar p {
+        line-height: 27px
+      }
+
+      .box {
+        margin: 15px 0;
+      }
+
+      .br-background {
+        padding: 20px 15px;
+        background-color: #e4e4e4;
+        border: 1px solid #ccc;
+      }
+
+      #sidebar ul {
+        list-style: none;
+        border-bottom: 1px solid #ccc;
+      }
+
+      #sidebar ul li {
+        background-color: #ffffff;
+        line-height: 32px;
+        height: 32px;
+        border-bottom: 1px solid #ccc;
+      }
+
+      #sidebar ul li:last-child {
+        border: none;
+      }
+
+      #sidebar ul li a {
+        padding-left: 12px;
+        display: block;
+        color: #333;
+        text-decoration: none;
+        transition: 0.5s;
+      }
+
+      #sidebar ul li a:hover {
+        background-color: black;
+        color: #fff;
+      }
+      /* sidebarここから */
+
+      footer {
+        height: 51px;
+        font-size: 12px;
+        clear:both;
+        text-align: center;
+        line-height: 2em;
+        color: white;
+        background: #000000
+      }
+    </style>
+  </head>
+
+
+  <body>
+    <header>
+      <div class="all-container">
+        <div class="inner">
+          <h1><a href="index.html"><img src="gallery_hina_logo.png" alt="ロゴ画像"></a></h1>
+          <ul>
+            <li>
+              <h2>お電話でのご予約はこちら</h2>
+              <p><a href="contact.html" class="number-top">000-0000-0000</a></p>
+            </li>
+            <li>
+              <a href="contact.html">FAX予約</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+　　</header>
+    <nav id="global_nav">
+      <div class="all-container">
+        <ul>
+          <li><a href="index.html">トップページ</a></li><!--
+       --><li><a href="exhibition.html">過去の展示会</a></li><!--
+       --><li><a href="service.html">ご利用案内</a></li><!--
+       --><li><a href="access.html">アクセス</a></li><!--
+       --><li><a href="contact.html">お問い合わせ</a></li><!--
+       --><li><a href="question.html">よくある質問</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="key_visual">
+      <div class="inner">
+        <div class="key_visual_contents">
+
+        </div>
+      </div>
+    </div>
+    <div class="all-container">
+      <div class="container">
+        <div id="main">
+          <section>
+            <h2>ギャラリ雛について</h2>
+            <h3>ギャラリー雛ってどんなところ？</h3>
+            <p>ギャラリー雛はさまざまな趣味や自身の作った作品を展示・公開することのできるアートギャラリーです。個人・法人関係なく、20~90代にわたる
+            幅広い世代の方々が多くの人に自らの表現したものをみてもらうために利用される方が多いです。
+
+            <br>　ギャラリーは阪急夙川駅から徒歩5分。細い路地に面しており、角地の１階で入りやすく、作品の搬出入が容易であることが特長です。よってギャラ
+            リー沿いに車両を止め、画材・展示品の搬入・搬出もしやすくなっています。床面積は53㎡（16坪）あり、数多くの展示品を置けるだけでなく、
+            北側・東側がガラス張りになっているため、日当たりが良くリラックスした気持ちで展覧会を楽しんでいただけるのも特長の一つです。
+
+            <br>　過去には、水墨画・油絵・水彩画・パステルなどの絵画だけでなく、ガラス品・陶芸・彫刻・手芸品（小物・雑貨・アクセサリー・レースド
+            レス）など、幅広い類の作品を展示していただいています。</p>
+            <div class="slide-wrapper">
+              <ul class="slides">
+                <li class="slide active"><img src="image4.jpg"></li>
+                <li class="slide"><img src="image10.jpg"></li>
+                <li class="slide"><img src="image11.jpg"></li>
+              </ul>
+              <div class="index-btn-wrapper">
+                <div class="index-btn">1</div>
+                <div class="index-btn">2</div>
+                <div class="index-btn">3</div>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h3>ギャラリー雛ってどんなところにあるの？</h3>
+            <p>　ギャラリー雛は、兵庫県西宮市の夙川にあります。夙川はここ近年、「関西住みたい街ランキング」でも毎年上位に入り込んでおり、さまざまな
+            世代から「おしゃれで美しい街並み」というイメージが浸透しています。最寄り駅は阪急夙川駅（徒歩5分）、JRさくら夙川（徒歩10分）、阪神西宮（
+            徒歩20分）という好立地。阪急夙川駅から梅田へは16分、神戸三宮へは11分という好立地で、非常に利便性が高いことも
+            人気が高い理由の一つです。
+
+            <br>　また、夙川沿いの桜並木も魅力のひとつとして知られています。河川敷に沿って続く「夙川さくら道」は「日本桜名所100選」にも選ばれ、シー
+            ズンには多くのお花見客でにぎわいます。阪急夙川駅は夙川をまたいでいて、ホームに舞い落ちる桜吹雪も風流として人気を集めています。</p>
+            <div class="slide-wrapper-second">
+              <ul class="slides-second">
+                <li class="slide-second active"><img src="shukugawa01.jpg"></li>
+                <li class="slide-second"><img src="shukugawa03.jpg"></li>
+                <li class="slide-second"><img src="shukugawa-station.jpg"></li>
+              </ul>
+              <div class="index-btn-wrapper-second">
+                <div class="index-btn-second">1</div>
+                <div class="index-btn-second">2</div>
+                <div class="index-btn-second">3</div>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2>更新情報・お知らせ</h2>
+            <div class="news">
+              <dl>
+                <dt><time>2021/1/6</time></dt><!--
+             --><dd>閉館のお知らせ。ギャラリー雛は2021年3月31日を持ちまして閉館することになりました。<span>NEW</span></dd>
+                <dt><time>2019/5/31~</time></dt><!--
+             --><dd>水墨画九人展</dd>
+                <dt><time>2019/5/10~</time></dt><!--
+             --><dd>中西徹展</dd>
+                <dt><time>2019/5/3~</time></dt><!--
+             --><dd>ざっくばらん展</dd>
+                <dt><time>2019/12/7~</time></dt><!--
+             --><dd>手作り大好き展</dd>
+                <dt><time>2018/11/30~</time></dt><!--
+             --><dd>石田和江展</dd>
+                <dt><time>2018/11/23~</time></dt><!--
+             --><dd>戸上恭子展</dd>
+                <dt><time>2018/11/09~</time></dt><!--
+             --><dd>新見美京都支部展</dd>
+              </dl>
+            </div>
+          </section>
+        </div><!-- /#main -->
+        <div id="sidebar">
+          <div class="box br-background">
+            <h2>SUB MENU</h2>
+            <ul>
+              <li><a href="index.html">トップページ</a></li><!--
+           --><li><a href="exhibition.html">過去の展示会</a></li><!--
+           --><li><a href="service.html">ご利用案内</a></li><!--
+           --><li><a href="access.html">アクセス</a></li><!--
+           --><li><a href="contact.html">お問い合わせ</a></li><!--
+           --><li><a href="question.html">よくある質問</a></li>
+            </ul>
+          </div>
+        </div><!-- /#sidebar -->
+        <footer>
+          <p><small>当ホームページに記載の画像・内容に関する無断転載はご遠慮ください。</small></p>
+          <p>利用者の方々の個人情報の無断転載・利用につきましては、見つけ次第、法的処置を執る場合もございます。</p>
+        </footer>
+        <script type="text/javascript" src="script.js"></script>
+      </div><!-- /.container -->
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"></script>
+  </body>
+</html>

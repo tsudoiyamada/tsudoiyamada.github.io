@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>ギャラリー雛</title>
+    <meta name="description" content="ギャラリー雛はのホームページを作り替えました。">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+    /* リセットCSSここから */
+    /*
+      html5doctor.com Reset Stylesheet
+      v1.6.1
+      Last Updated: 2010-09-17
+      Author: Richard Clark - http://richclarkdesign.com
+      Twitter: @rich_clark
+      */
+
+      html, body, div, span, object, iframe,
+      h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+      abbr, address, cite, code,
+      del, dfn, em, img, ins, kbd, q, samp,
+      small, strong, sub, sup, var,
+      b, i,
+      dl, dt, dd, ol, ul, li,
+      fieldset, form, label, legend,
+      table, caption, tbody, tfoot, thead, tr, th, td,
+      article, aside, canvas, details, figcaption, figure,
+      footer, header, hgroup, menu, nav, section, summary,
+      time, mark, audio, video {
+        margin:0;
+        padding:0;
+        border:0;
+        outline:0;
+        font-size:100%;
+        vertical-align:baseline;
+        background:transparent;
+      }
+
+      body {
+        line-height:1;
+      }
+
+      article,aside,details,figcaption,figure,
+      footer,header,hgroup,menu,nav,section {
+        display:block;
+      }
+
+      nav ul {
+        list-style:none;
+      }
+
+      blockquote, q {
+        quotes:none;
+      }
+
+      blockquote:before, blockquote:after,
+      q:before, q:after {
+        content:'';
+        content:none;
+      }
+
+      a {
+        margin:0;
+        padding:0;
+        font-size:100%;
+        vertical-align:baseline;
+        background:transparent;
+      }
+
+      /* change colours to suit your needs */
+      ins {
+        background-color:#ff9;
+        color:#000;
+        text-decoration:none;
+      }
+
+      /* change colours to suit your needs */
+      mark {
+        background-color:#ff9;
+        color:#000;
+        font-style:italic;
+        font-weight:bold;
+      }
+
+      del {
+        text-decoration: line-through;
+      }
+
+      abbr[title], dfn[title] {
+        border-bottom:1px dotted;
+        cursor:help;
+      }
+
+      table {
+        border-collapse:collapse;
+        border-spacing:0;
+      }
+
+      /* change border colour to suit your needs */
+      hr {
+        display:block;
+        height:1px;
+        border:0;
+        border-top:1px solid #cccccc;
+        margin:1em 0;
+        padding:0;
+      }
+
+      input, select {
+        vertical-align:middle;
+      }
+
+
+
+      /*  cssここから */
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+      }
+
+      .all-container {
+        width: 100%;
+      }
+
+      /* headerここから*/
+      header {
+        text-align: right;
+        margin: 0 auto;
+        height: 105px;
+        width: 100%;
+        max-width: 1100px;
+      }
+
+      header ul {
+        display: inline-block;
+        padding-top: 20px;
+      }
+
+      header ul li {
+        display: inline-block;
+        list-style: none;
+        text-align: left;
+        vertical-align: middle;
+      }
+
+      header ul li h2 {
+        color: #6C757D;
+        font-size: 13px;
+        padding-bottom: 7px;
+      }
+
+      header ul li:first-child {
+        margin-right: 28px;
+      }
+
+      header ul li p {
+        color: #6C757D;
+        font-size: 26px;
+        padding-top: 7px;
+      }
+
+      header ul li a:not(.number-top) {
+        width: 80px;
+        height: 20px;
+        color: #ffffff;
+        text-decoration: none;
+        background-color: #5A6268;
+        height: 48px;
+        width: 115px;
+        line-height: 48px;
+        padding: 10px 18px;
+        border-radius: 6px;
+      }
+
+      header ul li .number-top {
+        font-size: 24px;
+        text-decoration: none;
+        color: black;
+      }
+
+      header ul li .number-top:hover {
+        color: #1e90ff;
+      }
+
+      header h1 img {
+        width: 280px;
+        height: 86px;
+        margin-bottom: 10px;
+      }
+      /* headerここまで */
+
+      /* navここから */
+      #global_nav {
+        background: #FFFFFF;
+        margin-bottom: 16px;
+        text-align: center;
+      }
+
+      #global_nav ul {
+        width: 1100px;
+        margin: 0 auto;
+        display: inline-block;
+      }
+
+      #global_nav ul li {
+        display: inline-block;
+        width: 180px;
+        text-align: center;
+        border-left: 0.5px solid #000;
+      }
+
+      #global_nav ul li:last-child {
+        border-right: 0.5px solid #000;
+      }
+
+      #global_nav ul li a:not(.number-top) {
+        height: 51px;
+        line-height: 51px;
+        display: inline-block;
+        text-decoration: none;
+        font-size: 17px;
+        font-weight: normal;
+        transition: background-color .2s linear;
+        text-align: center;
+        padding: 0 35px;
+      }
+
+      header ul li .number-top {
+        font-size: 24px;
+        text-decoration: none;
+        color: black;
+      }
+
+      header ul li .number-top:hover {
+        color: #1e90ff;
+      }
+
+      #global_nav ul li a:link {
+        text-decoration: none;
+        color: #000000;
+      }
+      #global_nav ul li a:visited {
+        text-decoration: none;
+        color: #000000;
+      }
+      #global_nav ul li a:active {
+        text-decoration: none;
+        color: #000000;
+      }
+      #global_nav ul li a:hover {
+        border-bottom: solid;
+        border-bottom-color: #333333;
+        border-bottom-width: 1px;
+      }
+      /* navここまで */
+
+      /* key_visualここから */
+      .key_visual {
+        margin: 0 auto;
+        background-position: center;
+        background-image: url(editted1.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: 0.8;
+        margin-top: 5px;
+        height: 293px;
+        width: 100%;
+        max-width: 1100px;
+      }
+
+      .key_visual_contents {
+        position: absolute; top: 140px; left: 900px;
+      }
+
+      .inner {
+        width: 1100px;
+        margin: 0 auto;
+        position: relative;
+      }
+
+      .inner h1 {
+        position: absolute; top:7px;
+      }
+      /* key_visualここまで */
+
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        margin-top: 10px;
+        font-size: 15px;
+        line-height: 2em;
+      }
+
+      /* mainここから */
+      #main {
+        width: 73%;
+        float: right;
+        padding-bottom: 95px;
+      }
+
+      @media (max-width: 1000px) {
+       header ul {
+         display: none;
+       }
+
+       header ul li{
+         width: 100%;
+       }
+
+       #global_nav ul {
+         width: 100%;
+       }
+
+       .key-visual {
+         width: 100%;
+       }
+
+        #sidebar {
+          width: 0;
+          display: none;
+        }
+
+        #main {
+          width: 100%;
+          margin: 0 auto;
+        }
+
+        #main h2, h3 {
+          width: 100%;
+          margin: 0 auto;
+          font-size: 15px;
+        }
+
+        #main section p {
+          text-align: left;
+          font-size: 15px;
+        }
+      }
+
+      @media (max-width: 670px) {
+        header ul {
+          display: none;
+        }
+
+        #global_nav ul li {
+          margin-bottom: 10px;
+        }
+
+        #global_nav ul li:nth-child(2) {
+          border-right: 0.5px solid #000;
+        }
+
+        #global_nav ul li:nth-child(4) {
+          border-right: 0.5px solid #000;
+        }
+
+        #sidebar {
+          width: 0;
+          display: none;
+        }
+
+        #main h2, h3 {
+          width: 100%;
+          margin: 0 auto;
+          text-align: center;
+          font-size: 13px;
+        }
+
+        #main section p {
+          text-align: left;
+          font-size: 13px;
+        }
+        footer {
+          text-align: center;
+        }
+
+        footer p {
+          font-size: 4px;
+        }
+      }
+
+      #main h2 {
+        color: white;
+        background: #000000 url(mark1.png) no-repeat left 5px center;
+        margin: 15px 0;
+        line-height: 39px;
+        padding-left: 30px;
+      }
+
+      #main h3 {
+        height: 38px;
+        padding: 0 15px;
+        border: 1px solid #ccc;
+        margin: 15px 0;
+        background: linear-gradient(#fff, #ebebeb);
+        color: #333;
+        line-height: 38px;
+      }
+
+      #main h4 {
+        font-weight: bold;
+        padding-right: 15px;
+        padding-left: 15px;
+        padding-bottom: 0 auto;
+        margin-top: 14px;
+        text-indent: -1em;
+        margin-left: 1em;
+      }
+
+      #main h4:before {
+        content: '';
+        display: inline-block;
+        width: 0;
+        height: 0;
+        margin-top: 14px;
+        margin-right: 4px;
+        margin-left: 4px;
+        border: transparent solid 5px;
+        border-left-color: #000000;
+        vertical-align: 4px;
+      }
+
+      #main p {
+        line-height: 27px;
+        padding: 0 15px;
+      }
+
+      #main a {
+        color: #333;
+      }
+
+      #main .phone-number {
+        font-size: 25px;
+        padding: 10px;
+      }
+
+      #main .phone-number:hover {
+        color: #1e90ff;
+      }
+
+      #main .rice {
+        font-size: 15px;
+        margin-top: 10px;
+      }
+
+      #main .mail-address{
+        font-size: 20px;
+      }
+
+      #main .mail-address:hover {
+        color: #1e90ff;
+      }
+
+      /* sidebarここから */
+      #sidebar {
+        width: 23%;
+        float: left;
+      }
+
+      #sidebar h2 {
+        padding-left: 10px;
+        border-left: 3px solid #000;
+        margin-bottom: 18px;
+        line-height: 1em;
+      }
+
+      #sidebar p {
+        line-height: 27px
+      }
+
+      .box {
+        margin: 15px 0;
+      }
+
+      .br-background {
+        padding: 20px 15px;
+        background-color: #e4e4e4;
+        border: 1px solid #ccc;
+      }
+
+      #sidebar ul {
+        list-style: none;
+        border-bottom: 1px solid #ccc;
+      }
+
+      #sidebar ul li {
+        background-color: #ffffff;
+        line-height: 32px;
+        height: 32px;
+        border-bottom: 1px solid #ccc;
+      }
+
+      #sidebar ul li:last-child {
+        border: none;
+      }
+
+      #sidebar ul li a {
+        padding-left: 12px;
+        display: block;
+        color: #333;
+        text-decoration: none;
+        transition: 0.5s;
+      }
+
+      #sidebar ul li a:hover {
+        background-color: black;
+        color: #fff;
+      }
+      /* sidebarここから */
+
+      footer {
+        height: 51px;
+        font-size: 12px;
+        clear:both;
+        text-align: center;
+        line-height: 2em;
+        color: white;
+        background: #000000
+      }
+    </style>
+  </head>
+
+
+  <body>
+    <header>
+      <div class="all-container">
+        <div class="inner">
+          <h1><a href="index.html"><img src="gallery_hina_logo.png" alt="ロゴ画像"></a></h1>
+          <ul>
+            <li>
+              <h2>お電話でのご予約はこちら</h2>
+              <p><a href="contact.html" class="number-top">000-0000-0000</a></p>
+            </li>
+            <li>
+              <a href="contact.html">FAX予約</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+　　</header>
+    <nav id="global_nav">
+      <div class="all-container">
+        <ul>
+          <li><a href="index.html">トップページ</a></li><!--
+       --><li><a href="exhibition.html">過去の展示会</a></li><!--
+       --><li><a href="service.html">ご利用案内</a></li><!--
+       --><li><a href="access.html">アクセス</a></li><!--
+       --><li><a href="contact.html">お問い合わせ</a></li><!--
+       --><li><a href="question.html">よくある質問</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="key_visual">
+      <div class="inner">
+        <div class="key_visual_contents">
+        </div>
+      </div>
+    </div>
+    <div class="all-container">
+      <div class="container">
+        <div id="main">
+          <h2>お問い合わせ</h2>
+          <p>　ギャラリー雛へのお問い合わせについては以下の電話番号・メールアドレスにて受付しております。</p>
+          <h3>電話番号</h3>
+          <h4>自宅兼事務所</h4>
+          <p class="phone-number">0798-00-0000</p>
+          <p class="rice">※ 平日（9~17時）は仕事をしている可能性が高いため、おかけいただいても対応できない
+          可能性が高いです。御了承ください</p>
+          <h4>管理者携帯電話番号</h4>
+          <p class="phone-number">080-0000-0000</p>
+          <p class="rice">※ 自宅兼事務所の電話番号にかけても電話に出ない場合は、上記の携帯電話番号におかけください。</p>
+          <h3>ファックス</h3>
+          <p class="phone-number" id="fax-contact">0798-00-0000</p>
+          <p class="rice">※1 ギャラリーの使用申し込みをしてただく際に是非ご利用ください。
+          <br>申し込みについては、「ご利用案内」に添付しているA4サイズの使用申込書を印刷・記入の上、上記FAX番号まで送信してください。
+          記入内容を確認したのち、後日申込書に記載の電話番号に連絡させていただきます。</p>
+          <p class="rice">※2 よく利用されるお客様からいただく質問をメニューの「よくある質問」の中にまとめました。当ギャラリーを利用されるにあたって、
+          もし疑問点・不明点等ございましたら、上記の事務所兼自宅もしくは携帯電話番号までお問い合わせください。</p>
+          <h3>メールアドレス</h3>
+          <p class="mail-address"><a href="">gallery.shukugawa@gmail.com</a></p>
+          <h3>管理者名</h3>
+          <p>山田集</p>
+        </div><!-- /#main -->
+        <div id="sidebar">
+          <div class="box br-background">
+            <h2>SUB MENU</h2>
+            <ul>
+              <li><a href="index.html">トップページ</a></li><!--
+           --><li><a href="exhibition.html">過去の展示会</a></li><!--
+           --><li><a href="service.html">ご利用案内</a></li><!--
+           --><li><a href="access.html">アクセス</a></li><!--
+           --><li><a href="contact.html">お問い合わせ</a></li><!--
+           --><li><a href="question.html">よくある質問</a></li>
+            </ul>
+          </div>
+        </div><!-- /#sidebar -->
+        <footer>
+          <p><small>当ホームページに記載の画像・内容に関する無断転載はご遠慮ください。</small></p>
+          <p>利用者の方々の個人情報の無断転載・利用につきましては、見つけ次第、法的処置を執る場合もございます。</p>
+        </footer>
+      </div><!-- /.container -->
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"></script>
+  </body>
+</html>
